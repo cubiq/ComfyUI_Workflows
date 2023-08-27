@@ -32,7 +32,7 @@ To review any workflow you can simply drop the JSON file onto your ComfyUI work 
 
 Let's get started!
 
-<img src="workflow_images/SDXL_fox.png" alt="fox" width="256" height="256" />
+<img src="images/SDXL_fox.png" alt="fox" width="256" height="256" />
 
 ## Categories
 
