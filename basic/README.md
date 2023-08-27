@@ -24,6 +24,6 @@ The easiest image generation workflow. We will examine each aspect of this first
 
 **Important:** In ComfyUI the random number generation is different to other UIs, that makes it very difficult to recreate the same image generated for example on A1111.
 
-**Tio:** The connection "dots" on each node has a color, that color helps you understand where the node should be connected to/from.
+**Tip:** The connection "dots" on each node has a color, that color helps you understand where the node should be connected to/from.
 
 **Tip:** If the image looks oversaturated or has too much contrast, try to lower the CFG scale.
