@@ -180,4 +180,19 @@ SDXL can also be used only with the base model. This can be useful if you have l
 
 # Experiments
 
-TODO
+In the experiments we are applying what we've learned in the category to try to explore more advanced workflows.
+
+## [Compare Samplers](./experiments/compare_samplers.json)
+
+In this workflow we are checking the difference between four samplers. We use the same checkpoint, number of steps and CFG scale to see which sampler offers the best result.
+
+<details>
+<summary>Image comparison</summary>
+<img src="images/compare_samplers.png" alt="compare samplers" width="768" />
+</details>
+
+## [Compare checkpoints](./experiments/compare_checkpoints.json)
+
+In this workflow we are comparing two checkpoints using the same prompt and sampler options: [Absolute Realisty](https://civitai.com/models/81458/absolutereality) and [Realistic Vision](https://huggingface.co/SG161222/Realistic_Vision_V3.0_VAE).
+
+Note that all models in the workflow need to be loaded into memory so it can become resource hungry to compare checkpoints.
