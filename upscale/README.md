@@ -106,7 +106,7 @@ This technique is so efficient and flexible that it is often used as go-to upsca
 4. We load the Tile control net
 5. We apply the control net using the original (not upscaled) image as reference. We use the same text prompt as conditioning but it pass through the control net. We are using 1.0 as strength as we want the final image to be as close as possible to the orignal.
 
-Finally run the second pass. You can play with the controlnet strength and the denoise level to try to stay closer (or farther) to the source.
+Finally we run the second pass. You can play with the controlnet strength and the denoise level to try to stay closer (or farther) to the source. By lowering the denoise value we get closer to the original image but we lose the sharpening effect of the second pass. `0.75` seems a good compromise but depends on the image.
 
 # Experiments
 
