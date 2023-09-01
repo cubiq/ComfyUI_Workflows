@@ -1,3 +1,16 @@
+<!-- TOC -->
+
+- [Upscale](#upscale)
+    - [Upscale latent](#upscale-latent)
+    - [Upscale pixels](#upscale-pixels)
+    - [Upscale pixels by model](#upscale-pixels-by-model)
+    - [Upscale latent in SDXL](#upscale-latent-in-sdxl)
+    - [Upscale latent by model](#upscale-latent-by-model)
+    - [Upscale with Tile ControlNet](#upscale-with-tile-controlnet)
+- [Experiments](#experiments)
+
+<!-- /TOC -->
+
 # Upscale
 
 This section explores various ways to upscale and apply *hires fix* to an image.

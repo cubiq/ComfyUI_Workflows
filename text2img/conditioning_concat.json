@@ -1,6 +1,6 @@
 {
   "last_node_id": 21,
-  "last_link_id": 86,
+  "last_link_id": 108,
   "nodes": [
     {
       "id": 8,
@@ -223,147 +223,6 @@
       ]
     },
     {
-      "id": 3,
-      "type": "KSampler",
-      "pos": [
-        880,
-        210
-      ],
-      "size": {
-        "0": 300,
-        "1": 262
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 1
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 64
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 6
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 2
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            7
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        118,
-        "fixed",
-        20,
-        7,
-        "dpmpp_2m_sde",
-        "karras",
-        1
-      ]
-    },
-    {
-      "id": 18,
-      "type": "CLIPTextEncode",
-      "pos": [
-        430,
-        80
-      ],
-      "size": {
-        "0": 370,
-        "1": 160
-      },
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 25
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            84
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "CLIP Text Encode (Positive)",
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "closeup photo of a woman in winter wearing a (white coat:1.1)\n\nhigh resolution, high quality, detailed, 4k"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 17,
-      "type": "CLIPTextEncode",
-      "pos": [
-        430,
-        -40
-      ],
-      "size": {
-        "0": 230,
-        "1": 76
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 16
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            83
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "CLIP Text Encode (Positive)",
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "a (red hat:1.2) "
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 20,
       "type": "CLIPTextEncode",
       "pos": [
@@ -399,7 +258,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "a (blue scarf:1.3)"
+        "on the beach"
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -422,12 +281,12 @@
         {
           "name": "conditioning_to",
           "type": "CONDITIONING",
-          "link": 83
+          "link": 103
         },
         {
           "name": "conditioning_from",
           "type": "CONDITIONING",
-          "link": 84
+          "link": 102
         }
       ],
       "outputs": [
@@ -446,6 +305,88 @@
       },
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 17,
+      "type": "CLIPTextEncode",
+      "pos": [
+        430,
+        -40
+      ],
+      "size": {
+        "0": 230,
+        "1": 76
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            103
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Positive)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "a (red bucket:1.1)"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 18,
+      "type": "CLIPTextEncode",
+      "pos": [
+        430,
+        80
+      ],
+      "size": {
+        "0": 370,
+        "1": 160
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            102
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Positive)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "a blue ball\n\nhigh resolution, high quality, detailed, 4k"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
     },
     {
       "id": 21,
@@ -478,7 +419,7 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
-            64
+            108
           ],
           "shape": 3,
           "slot_index": 0
@@ -489,6 +430,65 @@
       },
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        880,
+        210
+      ],
+      "size": {
+        "0": 300,
+        "1": 262
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 108
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 6
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            7
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        132,
+        "fixed",
+        20,
+        7,
+        "dpmpp_2m_sde",
+        "karras",
+        1
+      ]
     }
   ],
   "links": [
@@ -573,30 +573,6 @@
       "CLIP"
     ],
     [
-      64,
-      21,
-      0,
-      3,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      83,
-      17,
-      0,
-      19,
-      0,
-      "CONDITIONING"
-    ],
-    [
-      84,
-      18,
-      0,
-      19,
-      1,
-      "CONDITIONING"
-    ],
-    [
       85,
       19,
       0,
@@ -610,6 +586,30 @@
       0,
       21,
       0,
+      "CONDITIONING"
+    ],
+    [
+      102,
+      18,
+      0,
+      19,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      103,
+      17,
+      0,
+      19,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      108,
+      21,
+      0,
+      3,
+      1,
       "CONDITIONING"
     ]
   ],

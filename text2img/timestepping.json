@@ -118,10 +118,10 @@
         460,
         590
       ],
-      "size": [
-        210,
-        220
-      ],
+      "size": {
+        "0": 210,
+        "1": 220
+      },
       "flags": {},
       "order": 7,
       "mode": 0,
@@ -196,10 +196,10 @@
         460,
         320
       ],
-      "size": [
-        210,
-        220
-      ],
+      "size": {
+        "0": 210,
+        "1": 220
+      },
       "flags": {},
       "order": 9,
       "mode": 0,
@@ -274,10 +274,10 @@
         460,
         50
       ],
-      "size": [
-        210,
-        220
-      ],
+      "size": {
+        "0": 210,
+        "1": 220
+      },
       "flags": {},
       "order": 10,
       "mode": 0,
@@ -432,76 +432,16 @@
       "bgcolor": "#353"
     },
     {
-      "id": 36,
-      "type": "KSampler",
-      "pos": [
-        930,
-        830
-      ],
-      "size": {
-        "0": 315,
-        "1": 262
-      },
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 60
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 86
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 58
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 59
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            62
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        13,
-        "fixed",
-        20,
-        8,
-        "euler",
-        "normal",
-        1
-      ]
-    },
-    {
       "id": 45,
       "type": "ConditioningSetTimestepRange",
       "pos": [
         700,
         180
       ],
-      "size": [
-        240,
-        80
-      ],
+      "size": {
+        "0": 240,
+        "1": 82
+      },
       "flags": {},
       "order": 13,
       "mode": 0,
@@ -534,90 +474,6 @@
       "bgcolor": "#653"
     },
     {
-      "id": 38,
-      "type": "ConditioningSetTimestepRange",
-      "pos": [
-        700,
-        390
-      ],
-      "size": [
-        240,
-        80
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 65
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            66
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ConditioningSetTimestepRange"
-      },
-      "widgets_values": [
-        0.5,
-        1
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
-      "id": 41,
-      "type": "ConditioningSetTimestepRange",
-      "pos": [
-        700,
-        590
-      ],
-      "size": {
-        "0": 240,
-        "1": 80
-      },
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 67
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            68
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ConditioningSetTimestepRange"
-      },
-      "widgets_values": [
-        0,
-        0.5
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 37,
       "type": "VAELoader",
       "pos": [
@@ -629,7 +485,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "outputs": [
         {
@@ -656,10 +512,10 @@
         1240,
         450
       ],
-      "size": [
-        230,
-        50
-      ],
+      "size": {
+        "0": 230,
+        "1": 50
+      },
       "flags": {},
       "order": 15,
       "mode": 0,
@@ -699,10 +555,10 @@
         980,
         450
       ],
-      "size": [
-        230,
-        50
-      ],
+      "size": {
+        "0": 230,
+        "1": 50
+      },
       "flags": {},
       "order": 14,
       "mode": 0,
@@ -747,7 +603,7 @@
         "1": 100
       },
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "outputs": [
         {
@@ -798,7 +654,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 6,
+      "order": 5,
       "mode": 0,
       "outputs": [
         {
@@ -909,7 +765,7 @@
         "1": 140
       },
       "flags": {},
-      "order": 3,
+      "order": 6,
       "mode": 0,
       "outputs": [
         {
@@ -939,6 +795,150 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 41,
+      "type": "ConditioningSetTimestepRange",
+      "pos": [
+        700,
+        590
+      ],
+      "size": {
+        "0": 240,
+        "1": 82
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 67
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            68
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningSetTimestepRange"
+      },
+      "widgets_values": [
+        0,
+        0.6
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 38,
+      "type": "ConditioningSetTimestepRange",
+      "pos": [
+        700,
+        390
+      ],
+      "size": {
+        "0": 240,
+        "1": 82
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 65
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            66
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningSetTimestepRange"
+      },
+      "widgets_values": [
+        0.6,
+        1
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 36,
+      "type": "KSampler",
+      "pos": [
+        930,
+        830
+      ],
+      "size": {
+        "0": 315,
+        "1": 262
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 60
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 86
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 58
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 59
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            62
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        13,
+        "fixed",
+        20,
+        7,
+        "dpmpp_2m",
+        "karras",
+        1
+      ]
     }
   ],
   "links": [

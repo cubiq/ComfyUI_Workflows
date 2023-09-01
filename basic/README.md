@@ -1,8 +1,28 @@
+<!-- TOC -->
+
+- [Basic](#basic)
+    - [Basic SD1.x Workflow](#basic-sd1x-workflow)
+    - [Basic SD1.x with external VAE](#basic-sd1x-with-external-vae)
+    - [Working with a batch of images](#working-with-a-batch-of-images)
+    - [Parametrize node options](#parametrize-node-options)
+    - [Apply Lora](#apply-lora)
+    - [Apply multiple Loras](#apply-multiple-loras)
+    - [CLIP skip Set CLIP last layer](#clip-skip-set-clip-last-layer)
+    - [SDXL Simple](#sdxl-simple)
+    - [SDXL Advanced](#sdxl-advanced)
+    - [SDXL Text_G + Text_L](#sdxl-text_g--text_l)
+    - [SDXL Base only](#sdxl-base-only)
+- [Experiments](#experiments)
+    - [Compare Samplers](#compare-samplers)
+    - [Compare checkpoints](#compare-checkpoints)
+
+<!-- /TOC -->
+
 # Basic
 
 This section contains the workflows for basic text-to-image generation in ComfyUI. These are the scaffolding for all your future node designs.
 
-*The title links directly to the JSON workflow.*
+The heading links directly to the JSON workflow.
 
 ## [Basic SD1.x Workflow](./basic_workflow.json)
 
@@ -40,7 +60,7 @@ An overall very good external VAE is provided by StabilityAI and it's called [va
 
 If the checkpoint doesn't include a proper VAE or when in doubt, the file above is a good all around option. In the picture below you can see the difference a VAE can do. On the right the eyes and the teeth are more defined.
 
-<img src="images/vae_comparison.jpg" alt="vae comparison" />
+<img src="images/vae_comparison.jpg" alt="vae comparison" width="512" height="256" />
 
 ## [Working with a batch of images](./basic_latent_batch.json)
 
