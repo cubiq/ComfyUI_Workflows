@@ -7,7 +7,7 @@
     - [Conditioning Average](#conditioning-average)
     - [Area conditioning](#area-conditioning)
     - [Timestepping](#timestepping)
-- [GLIGEN Box](#gligen-box)
+    - [GLIGEN Box](#gligen-box)
 - [Experiments](#experiments)
 
 <!-- /TOC -->
@@ -112,7 +112,7 @@ In this workflow we try to generate an freckled African-American/Japanese woman.
 
 :point_right: **Note:** You can have multiple timestep nodes and each can start/stop at different timing but it is important that no timeframe is left unconditioned. Ie: if you have two prompts and the first ends at 0.5, the second should start anywhere between 0 and 0.5 but not at 0.6 otherwise you'll have some steps without conditioning.
 
-# [GLIGEN Box](./gligen_box.json)
+## [GLIGEN Box](./gligen_box.json)
 
 GLIGEN are *guided* text-to-image models. Comfy only supports the box conditioning at the moment and it is similar to [area conditioning](#area-conditioning) we described earlier. For this to work you need to [download the GLIGEN models](https://huggingface.co/comfyanonymous/GLIGEN_pruned_safetensors/tree/main) and place them inside the `ComfyUI/models/gligen` directory.
 
