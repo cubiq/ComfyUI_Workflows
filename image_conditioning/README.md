@@ -93,17 +93,17 @@ As you can see the IPAdapter is tapped between the load checkout node and the ks
 
 ## [SDXL Revision](./revision_SDXL.json)
 
-Stability AI released [the Revision model](https://huggingface.co/stabilityai/control-lora#revision) that is similar to the other methods we explored in this section but dedicated to the SDXL.
+Stability AI released [the Revision model](https://huggingface.co/stabilityai/control-lora#revision) that is similar to the other methods we explored in this section but dedicated to SDXL.
 
 Revision is used for image (including multiple images) and image+text conditioning and it's also a rather effective tool for creating image variations.
 
 Download the [clip vision model](https://huggingface.co/stabilityai/control-lora/resolve/main/revision/clip_vision_g.safetensors) and place it in the `ComfyUI/models/clip_vision` directory.
 
-The workflow is similar to [unCLIP](#unclip-model) but the base checkpoint is SDXL base. In this example we are merging the style of two images.
+The workflow is similar to [unCLIP](#unclip-model) but the checkpoint is SDXL base. In this example we are merging the style of two images.
 
 <img src="./images/revision.jpg" width="768" alt="revision" >
 
-As per unCLIP, `noise_augmentation` determines the closeness to the reference image and `strength` the weight of the conditioning.
+As per unCLIP, `noise_augmentation` determines the closeness to the reference image (`0` being the closest) and `strength` the weight of the conditioning.
 
 :point_right: **Note:** to eliminate any interference from the text clip we also use `ConditioningZeroOut`, this is optional and used exclusively for the purpose of this example that is meant as a pure image+image conditioning without any other external influence. You can further alter the image generation by elimitating the zero out nodes and by adding a custom prompt.
 
