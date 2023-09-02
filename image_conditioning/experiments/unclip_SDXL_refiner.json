@@ -456,50 +456,6 @@
       ]
     },
     {
-      "id": 29,
-      "type": "CLIPTextEncodeSDXLRefiner",
-      "pos": [
-        1550,
-        710
-      ],
-      "size": {
-        "0": 210,
-        "1": 148
-      },
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 42
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            41
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
-      },
-      "widgets_values": [
-        6,
-        1024,
-        1024,
-        "blurry, illustration, low quality, noisy"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
       "id": 22,
       "type": "VAEEncode",
       "pos": [
@@ -943,6 +899,50 @@
       },
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 29,
+      "type": "CLIPTextEncodeSDXLRefiner",
+      "pos": [
+        1560,
+        700
+      ],
+      "size": {
+        "0": 210,
+        "1": 148
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 42
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            41
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
+      },
+      "widgets_values": [
+        3,
+        1024,
+        1024,
+        "blurry, illustration, low quality, noisy"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
     }
   ],
   "links": [

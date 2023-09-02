@@ -1,6 +1,6 @@
 {
-  "last_node_id": 15,
-  "last_link_id": 21,
+  "last_node_id": 16,
+  "last_link_id": 24,
   "nodes": [
     {
       "id": 8,
@@ -41,146 +41,6 @@
       "properties": {
         "Node name for S&R": "VAEDecode"
       }
-    },
-    {
-      "id": 13,
-      "type": "CLIPVisionEncode",
-      "pos": [
-        520,
-        270
-      ],
-      "size": [
-        250,
-        50
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip_vision",
-          "type": "CLIP_VISION",
-          "link": 16
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 20
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CLIP_VISION_OUTPUT",
-          "type": "CLIP_VISION_OUTPUT",
-          "links": [
-            17
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPVisionEncode"
-      }
-    },
-    {
-      "id": 15,
-      "type": "LoadImage",
-      "pos": [
-        120,
-        360
-      ],
-      "size": [
-        240,
-        320
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            20
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "cwf_budapest.jpg",
-        "image"
-      ]
-    },
-    {
-      "id": 12,
-      "type": "unCLIPCheckpointLoader",
-      "pos": [
-        30,
-        180
-      ],
-      "size": [
-        250,
-        120
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            14
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            13,
-            21
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            15
-          ],
-          "shape": 3,
-          "slot_index": 2
-        },
-        {
-          "name": "CLIP_VISION",
-          "type": "CLIP_VISION",
-          "links": [
-            16
-          ],
-          "shape": 3,
-          "slot_index": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "unCLIPCheckpointLoader"
-      },
-      "widgets_values": [
-        "sd21-unclip-h.ckpt"
-      ]
     },
     {
       "id": 3,
@@ -253,7 +113,7 @@
         "1": 106
       },
       "flags": {},
-      "order": 2,
+      "order": 0,
       "mode": 0,
       "outputs": [
         {
@@ -342,51 +202,6 @@
       ]
     },
     {
-      "id": 14,
-      "type": "unCLIPConditioning",
-      "pos": [
-        830,
-        60
-      ],
-      "size": [
-        260,
-        100
-      ],
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning",
-          "type": "CONDITIONING",
-          "link": 18
-        },
-        {
-          "name": "clip_vision_output",
-          "type": "CLIP_VISION_OUTPUT",
-          "link": 17
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            19
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "unCLIPConditioning"
-      },
-      "widgets_values": [
-        1,
-        0
-      ]
-    },
-    {
       "id": 6,
       "type": "CLIPTextEncode",
       "pos": [
@@ -426,6 +241,191 @@
       ],
       "color": "#232",
       "bgcolor": "#353"
+    },
+    {
+      "id": 12,
+      "type": "unCLIPCheckpointLoader",
+      "pos": [
+        30,
+        180
+      ],
+      "size": {
+        "0": 250,
+        "1": 120
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            14
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            13,
+            21
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            15
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "links": [
+            16
+          ],
+          "shape": 3,
+          "slot_index": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "unCLIPCheckpointLoader"
+      },
+      "widgets_values": [
+        "sd21-unclip-h.ckpt"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "CLIPVisionEncode",
+      "pos": [
+        520,
+        270
+      ],
+      "size": {
+        "0": 253.60000610351562,
+        "1": 50
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_vision",
+          "type": "CLIP_VISION",
+          "link": 16
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP_VISION_OUTPUT",
+          "type": "CLIP_VISION_OUTPUT",
+          "links": [
+            17
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPVisionEncode"
+      }
+    },
+    {
+      "id": 15,
+      "type": "LoadImage",
+      "pos": [
+        120,
+        360
+      ],
+      "size": {
+        "0": 240,
+        "1": 320
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            24
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "cwf_budapest.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "unCLIPConditioning",
+      "pos": [
+        830,
+        60
+      ],
+      "size": {
+        "0": 262,
+        "1": 102
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 18
+        },
+        {
+          "name": "clip_vision_output",
+          "type": "CLIP_VISION_OUTPUT",
+          "link": 17
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            19
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "unCLIPConditioning"
+      },
+      "widgets_values": [
+        1,
+        0.1
+      ]
     }
   ],
   "links": [
@@ -518,20 +518,20 @@
       "CONDITIONING"
     ],
     [
-      20,
-      15,
-      0,
-      13,
-      1,
-      "IMAGE"
-    ],
-    [
       21,
       12,
       1,
       7,
       0,
       "CLIP"
+    ],
+    [
+      24,
+      15,
+      0,
+      13,
+      1,
+      "IMAGE"
     ]
   ],
   "groups": [],

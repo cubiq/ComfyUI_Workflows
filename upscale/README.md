@@ -98,9 +98,9 @@ If you are not interested in having an upscaled image completely faithful to the
 
 ## [Upscale latent by model](./upscale_latent_with_model.json)
 
-As we learned it is desirable to work as much as possible in the latent space without conversion back and forth to the pixel space. It is also true that upscaling latents leads to very noisy results... unless you use a model.
+As we learned it is desirable to work as much as possible in the latent space without conversion back and forth from/to the pixel space. It is also true that upscaling the latent leads to very noisy results... unless you use a model.
 
-The result is not as good as upscaling pixels but a lot better than using a standard upscale algorithm directly on the latent.
+Upscaling latents with a model is not as sharp as upscaling pixels but a lot better than using a standard upscale algorithm.
 
 In this workflow we are using the [NNLatentUpscaler](https://github.com/Ttl/ComfyUi_NNLatentUpscale) extension that is compatible both with SD1.x and SDXL latents.
 

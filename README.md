@@ -49,7 +49,7 @@ Advanced Text-to-Image techniques. Word weighting, embeddings, timestepping, gli
 An image is worth a thousand words. Image-to-image techniques and some image conditioning models.
 
 ### [In/Out painting](in-out_painting/README.md)
-How to alter your already generated images.
+How to expand and alter your already generated images.
 
 ### [Guided composition](guided_composition/README.md)
 In this section we'll explore ControlNets, T2I-Adapter and other techniques to better pose and compose your images.
