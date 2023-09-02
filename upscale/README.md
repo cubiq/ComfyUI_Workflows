@@ -8,6 +8,9 @@
     - [Upscale latent by model](#upscale-latent-by-model)
     - [Upscale with Tile ControlNet](#upscale-with-tile-controlnet)
 - [Experiments](#experiments)
+    - [Compare upscale models](#compare-upscale-models)
+    - [Denoise impact on latent upscale](#denoise-impact-on-latent-upscale)
+    - [Denoise impact on pixel upscale](#denoise-impact-on-pixel-upscale)
 
 <!-- /TOC -->
 
@@ -123,4 +126,18 @@ Finally we run the second pass. You can play with the controlnet strength and th
 
 # Experiments
 
-TODO
+## [Compare upscale models](./experiments/compare_upscale_models.json)
+
+Very simple workflow to compare a few upscale models. You can find pixel upscale models on [OpenModelDB](https://openmodeldb.info/), if you don't know where to start from try: **UltraSharp**, **RealSR** or **Remacri**.
+
+## [Denoise impact on latent upscale](./experiments/denoise_impact_on_latent.json)
+
+As we talked in the [introduction](#upscale) upscaling the latent generates a lot of noise that needs to be compensated with a high `denoise` second pass.
+
+This workflow shows the impact of 4 denoise levels on a latent upscaled image. Low denoise (`0.25`) won't be sufficient for generating acceptable results. You'll probably notice that the minimum is around `0.55`.
+
+## [Denoise impact on pixel upscale](./experiments/denoise_impact_on_pixel.json)
+
+This is similar to the previous experiment but this time we are upscaling the image in the pixel space with an upscaling model.
+
+This time a `0.25` denoise is enough to reach satisfactiory results but sometimes a higher value will help in adding details and fixing small errors.

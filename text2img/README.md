@@ -9,6 +9,10 @@
     - [Timestepping](#timestepping)
     - [GLIGEN Box](#gligen-box)
 - [Experiments](#experiments)
+    - [Compare merging methods](#compare-merging-methods)
+    - [Blank token trick](#blank-token-trick)
+    - [Horrors in the negative](#horrors-in-the-negative)
+    - [Area conditiong vs GLIGEN box](#area-conditiong-vs-gligen-box)
 
 <!-- /TOC -->
 
@@ -128,4 +132,42 @@ Results are usually better than standard area conditioning but the GLIGEN models
 
 # Experiments
 
-TODO
+## [Compare merging methods](./experiments/compare_conditioning_merge.json)
+
+This workflow compares methods to merge two famous actors to generate a new person that has the physiognomy of both.
+
+We use:
+- standard prompting, by just adding both actors in the main prompt
+- conditioning average
+- conditioning concat
+- timestepping
+
+:warning: **Important:** the result of each method greately varies based on the complexity of the prompt and the checkpoint used. When the prompt is simple (like in this example) it is generally easy to have the model do what you want. Things get complicated with extended prompts or when the model is not trained for a specific concept.
+
+This workflow is presented just as an example an you should expand and experiment. Also each type of conditioning may need a different syntax of prompting, while we use the same for all of them for simplicity sake.
+
+## [Blank token trick](./experiments/blank_token.json)
+
+Anything can impact the image generation. Sometimes you may try to add weird unrelated words in your prompt just to see how the model react. The problem is that any meaningful word can steer the composition too much, what if you want to give the image just a little kick without changing anything substantial?
+
+Well, try to add a white space to your prompt like so: `a photo of a cat wearing a spacesuit inside a spaceship, high resolution, detailed, 4k, ,`
+
+Note the `, ,` at the end.
+
+This workflow compares two prompts with and without a black token.
+
+## [Horrors in the negative](./experiments/horrors_negative.json)
+
+This is a curious and actually very effective technique to *beautify* your composition with a simple word. We noticed that adding any *horror* related word in the negative prompt makes the images generally more pleasing without changing too much of the original concept.
+
+In this workflow we compare the results of the following words: `horror`, `zombie`, `Frankenstein`. The more generic "horror" is a safe bet as it doesn't impact too much but experiments with various words and check the result.
+
+:point_right: **Note:** depending on the subject removing the horror from the composition tends to make the images "too perfect" and less realistic. So use responsibly.
+
+## [Area conditiong vs GLIGEN box](./experiments/area_vs_gligen.json)
+
+This workflow compares area conditiong to GLIGEN, two spacial conditioning techniques that we explored in this section.
+
+They are both good options but GLIGEN is generally more faithful to the composition you are asking for.
+
+This example uses [dreamshaper](https://civitai.com/models/4384/dreamshaper) checkpoint.
