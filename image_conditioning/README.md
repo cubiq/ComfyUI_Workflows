@@ -1,3 +1,20 @@
+<!-- TOC -->
+
+- [Image-to-Image Conditioning](#image-to-image-conditioning)
+    - [Simple Img2Img](#simple-img2img)
+    - [unCLIP model](#unclip-model)
+    - [Style Model](#style-model)
+    - [IPAdapter image + text](#ipadapter-image--text)
+    - [SDXL Revision](#sdxl-revision)
+- [Experiments](#experiments)
+    - [unCLIP multiple images](#unclip-multiple-images)
+    - [unCLIP with SDXL refiner augmentation](#unclip-with-sdxl-refiner-augmentation)
+    - [IPAdapter image variations](#ipadapter-image-variations)
+    - [IPAdapter + Canny control net](#ipadapter--canny-control-net)
+    - [Timestepping a Style model](#timestepping-a-style-model)
+
+<!-- /TOC -->
+
 # Image-to-Image Conditioning
 
 A picture is worth a thousand words, sometimes starting from a reference image is more efficient than trying your luck with simple [text-to-image](../text2img/README.md).
