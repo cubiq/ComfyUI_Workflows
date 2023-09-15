@@ -75,21 +75,13 @@ For this to work you need the [CLIP Vision model]() in the `ComfyUI/models/clip_
 
 In this workflow we offer a simple image+text conditioning example. Also check the [experiments](#experiments) for more use cases. We are using SDXL but models for SD1.5 are also available.
 
-You need to download [these pretrained models](https://huggingface.co/h94/IP-Adapter/tree/main) on huggingface and install the [ComgyUI extension](https://github.com/laksjdjf/IPAdapter-ComfyUI).
+You need to download [these pretrained models](https://huggingface.co/h94/IP-Adapter/tree/main) on huggingface and install the [ComgyUI extension](https://github.com/cubiq/ComfyUI_IPAdapter_plus) (from yours truly). Note that **you need both the model and the image encoder**. Follow the installation instruction on the extension.
 
-Note that **you need both the model and the clip vision encoder**. Eg: for SDXL download the [ip-adapter_sdxl.bin](https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl.bin) file and place it under the IPAdapter extension directory `ComfyUI/custom_nodes/IPAdapter-ComfyUI/models`; then you need the image encoder [pytorch_model.bin](https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/image_encoder/pytorch_model.bin) and place it under `ComfyUI/models/clip_vision/`. I recommend renaming the image encoder to something easy to remember like `IP-Adapter_sdxl_pytorch_model.bin`. You then need to repeat the process for the SD1.5 models if you need them.
+The workflow itself is very simple and similar to the style model.
 
-The workflow itself is very simple:
+The IPAdapter models are very powerful and you can get interesting results with them. Check the [experiments](#experiments) for more examples.
 
-<img src="./images/ipadapter-img-txt.png" width="100%" alt="ipadapter image to text" />
-
-1. Load an image, in this example we are also upscaling it to the same latent dimension (it's generally a good idea albeit not always necessary).
-
-2. Load the clip vision model. Remember to use the model that matches your checkpoint (SDXL or SD1.5).
-
-3. Load and apply the IPAdapter. Again be sure to use the right model for the checkout. The `weight` is the strength of the image conditioning.
-
-As you can see the IPAdapter is tapped between the load checkout node and the ksampler, not the conditionings.
+<img src="./images/ipadapter-img-txt.jpg" height="256" alt="IPAdapter" />
 
 ## [SDXL Revision](./revision_SDXL.json)
 

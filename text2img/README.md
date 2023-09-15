@@ -24,7 +24,7 @@ These workflows explore the many ways we can use text for image conditioning.
 
 As always, the heading links directly to the workflow.
 
-:warning: **Important:** It's not always easy to forsee which conditioning method is better for a give task. Often results blur together and predicting what the model will do is impossible. The only way is to experiment, fortunately ComfyUI is very good at comparing workflows, we you are finished check the [Experiments](#experiments) section for some examples.
+:warning: **Important:** It's not always easy to forsee which conditioning method is better for a give task. Often results blur together and predicting what the model will do is impossible. The only way is to experiment, fortunately ComfyUI is very good at comparing workflows, check the [Experiments](#experiments) section for some examples.
 
 ## [Word weighting](./word_weighting.json)
 

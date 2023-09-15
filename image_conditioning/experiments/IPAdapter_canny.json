@@ -1,6 +1,6 @@
 {
-  "last_node_id": 37,
-  "last_link_id": 70,
+  "last_node_id": 40,
+  "last_link_id": 76,
   "nodes": [
     {
       "id": 7,
@@ -14,7 +14,7 @@
         "1": 90
       },
       "flags": {},
-      "order": 8,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -55,7 +55,7 @@
         "1": 90
       },
       "flags": {},
-      "order": 7,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -79,7 +79,7 @@
         "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "woman portrait carved on ice detailed"
+        "statue of a woman"
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -96,7 +96,7 @@
         "1": 50
       },
       "flags": {},
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -136,7 +136,7 @@
         "1": 480.7194519042969
       },
       "flags": {},
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -151,50 +151,18 @@
       ]
     },
     {
-      "id": 12,
-      "type": "CLIPVisionLoader",
-      "pos": [
-        -100,
-        670
-      ],
-      "size": {
-        "0": 280,
-        "1": 60
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "CLIP_VISION",
-          "type": "CLIP_VISION",
-          "links": [
-            60
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPVisionLoader"
-      },
-      "widgets_values": [
-        "IP-Adapter_sd15_pytorch_model.bin"
-      ]
-    },
-    {
       "id": 37,
       "type": "EmptyLatentImage",
       "pos": [
         529,
         738
       ],
-      "size": [
-        210,
-        110
-      ],
+      "size": {
+        "0": 210,
+        "1": 110
+      },
       "flags": {},
-      "order": 5,
+      "order": 0,
       "mode": 0,
       "outputs": [
         {
@@ -223,12 +191,12 @@
         260,
         1060
       ],
-      "size": [
-        210,
-        246
-      ],
+      "size": {
+        "0": 210,
+        "1": 246
+      },
       "flags": {},
-      "order": 11,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -248,12 +216,12 @@
         260,
         1340
       ],
-      "size": [
-        210,
-        60
-      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
       "flags": {},
-      "order": 6,
+      "order": 1,
       "mode": 0,
       "outputs": [
         {
@@ -274,127 +242,6 @@
       ]
     },
     {
-      "id": 3,
-      "type": "KSampler",
-      "pos": [
-        800,
-        590
-      ],
-      "size": {
-        "0": 300,
-        "1": 262
-      },
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 70
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 66
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 6
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 64
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            7
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        30,
-        "fixed",
-        20,
-        8,
-        "dpmpp_2m_sde",
-        "karras",
-        1
-      ]
-    },
-    {
-      "id": 32,
-      "type": "IPAdapter",
-      "pos": [
-        494,
-        521
-      ],
-      "size": {
-        "0": 253.60000610351562,
-        "1": 170
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 69
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 59
-        },
-        {
-          "name": "clip_vision",
-          "type": "CLIP_VISION",
-          "link": 60
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            70
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP_VISION_OUTPUT",
-          "type": "CLIP_VISION_OUTPUT",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "IPAdapter"
-      },
-      "widgets_values": [
-        1,
-        "ip-adapter_sd15.bin",
-        "fp16"
-      ]
-    },
-    {
       "id": 27,
       "type": "LoadImage",
       "pos": [
@@ -406,7 +253,7 @@
         "1": 320
       },
       "flags": {},
-      "order": 4,
+      "order": 2,
       "mode": 0,
       "outputs": [
         {
@@ -445,7 +292,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 0,
+      "order": 3,
       "mode": 0,
       "outputs": [
         {
@@ -466,18 +313,105 @@
       ]
     },
     {
+      "id": 33,
+      "type": "Canny",
+      "pos": [
+        250,
+        940
+      ],
+      "size": {
+        "0": 220,
+        "1": 82
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 61
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            62,
+            67
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Canny"
+      },
+      "widgets_values": [
+        0.3,
+        0.8
+      ]
+    },
+    {
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -100,
+        490
+      ],
+      "size": {
+        "0": 280,
+        "1": 100
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            75
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            3,
+            5
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "dreamshaper_8.safetensors"
+      ]
+    },
+    {
       "id": 36,
       "type": "ControlNetApply",
       "pos": [
         530,
         900
       ],
-      "size": [
-        210,
-        100
-      ],
+      "size": {
+        "0": 211.60000610351562,
+        "1": 100
+      },
       "flags": {},
-      "order": 12,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -511,70 +445,152 @@
         "Node name for S&R": "ControlNetApply"
       },
       "widgets_values": [
-        1
+        0.9500000000000001
       ]
     },
     {
-      "id": 33,
-      "type": "Canny",
+      "id": 3,
+      "type": "KSampler",
       "pos": [
-        250,
-        940
+        800,
+        590
       ],
-      "size": [
-        220,
-        80
-      ],
+      "size": {
+        "0": 300,
+        "1": 262
+      },
       "flags": {},
-      "order": 10,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 61
+          "name": "model",
+          "type": "MODEL",
+          "link": 76
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 66
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 6
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 64
         }
       ],
       "outputs": [
         {
-          "name": "IMAGE",
-          "type": "IMAGE",
+          "name": "LATENT",
+          "type": "LATENT",
           "links": [
-            62,
-            67
+            7
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        37,
+        "fixed",
+        25,
+        8,
+        "ddim",
+        "ddim_uniform",
+        1
+      ]
+    },
+    {
+      "id": 38,
+      "type": "CLIPVisionLoader",
+      "pos": [
+        -100,
+        390
+      ],
+      "size": [
+        280,
+        60
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "links": [
+            72
           ],
           "shape": 3,
           "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "Canny"
+        "Node name for S&R": "CLIPVisionLoader"
       },
       "widgets_values": [
-        0.3,
-        0.8
+        "IPAdapter_image_encoder_sd15.safetensors"
+      ]
+    },
+    {
+      "id": 39,
+      "type": "IPAdapterModelLoader",
+      "pos": [
+        -30,
+        290
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IPADAPTER",
+          "type": "IPADAPTER",
+          "links": [
+            71
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IPAdapterModelLoader"
+      },
+      "widgets_values": [
+        "ip-adapter-plus_sd15.bin"
       ]
     },
     {
       "id": 24,
       "type": "LoadImage",
       "pos": [
-        230,
-        260
+        240,
+        250
       ],
       "size": {
         "0": 220,
         "1": 320
       },
       "flags": {},
-      "order": 3,
+      "order": 7,
       "mode": 0,
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            59
+            74
           ],
           "shape": 3,
           "slot_index": 0
@@ -590,54 +606,63 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "cwf_iceberg.jpg",
+        "cwf_marble_statue.jpg",
         "image"
       ]
     },
     {
-      "id": 4,
-      "type": "CheckpointLoaderSimple",
+      "id": 40,
+      "type": "IPAdapterApply",
       "pos": [
-        -100,
-        490
+        550,
+        350
       ],
       "size": {
-        "0": 280,
-        "1": 100
+        "0": 210,
+        "1": 142
       },
       "flags": {},
-      "order": 1,
+      "order": 11,
       "mode": 0,
+      "inputs": [
+        {
+          "name": "ipadapter",
+          "type": "IPADAPTER",
+          "link": 71
+        },
+        {
+          "name": "clip_vision",
+          "type": "CLIP_VISION",
+          "link": 72
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 74
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 75
+        }
+      ],
       "outputs": [
         {
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            69
+            76
           ],
+          "shape": 3,
           "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            3,
-            5
-          ],
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [],
-          "slot_index": 2
         }
       ],
       "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
+        "Node name for S&R": "IPAdapterApply"
       },
       "widgets_values": [
-        "dreamshaper_8.safetensors"
+        0.7000000000000001,
+        0
       ]
     }
   ],
@@ -689,22 +714,6 @@
       23,
       0,
       "IMAGE"
-    ],
-    [
-      59,
-      24,
-      0,
-      32,
-      1,
-      "IMAGE"
-    ],
-    [
-      60,
-      12,
-      0,
-      32,
-      2,
-      "CLIP_VISION"
     ],
     [
       61,
@@ -763,16 +772,40 @@
       "IMAGE"
     ],
     [
-      69,
+      71,
+      39,
+      0,
+      40,
+      0,
+      "IPADAPTER"
+    ],
+    [
+      72,
+      38,
+      0,
+      40,
+      1,
+      "CLIP_VISION"
+    ],
+    [
+      74,
+      24,
+      0,
+      40,
+      2,
+      "IMAGE"
+    ],
+    [
+      75,
       4,
       0,
-      32,
-      0,
+      40,
+      3,
       "MODEL"
     ],
     [
-      70,
-      32,
+      76,
+      40,
       0,
       3,
       0,

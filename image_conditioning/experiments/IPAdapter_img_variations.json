@@ -1,6 +1,6 @@
 {
-  "last_node_id": 24,
-  "last_link_id": 38,
+  "last_node_id": 28,
+  "last_link_id": 45,
   "nodes": [
     {
       "id": 7,
@@ -14,7 +14,7 @@
         "1": 160
       },
       "flags": {},
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -97,7 +97,7 @@
           "type": "MODEL",
           "links": [
             1,
-            36
+            43
           ],
           "slot_index": 0
         },
@@ -137,7 +137,7 @@
         "1": 262
       },
       "flags": {},
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -196,7 +196,7 @@
         "1": 320
       },
       "flags": {},
-      "order": 10,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -221,7 +221,7 @@
         "1": 160
       },
       "flags": {},
-      "order": 5,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -262,7 +262,7 @@
         "1": 50
       },
       "flags": {},
-      "order": 13,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -335,7 +335,7 @@
         "1": 640
       },
       "flags": {},
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -346,47 +346,6 @@
       ],
       "properties": {
         "Node name for S&R": "PreviewImage"
-      }
-    },
-    {
-      "id": 8,
-      "type": "VAEDecode",
-      "pos": [
-        1030,
-        380
-      ],
-      "size": {
-        "0": 140,
-        "1": 50
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 7
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 12
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            30,
-            35
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
       }
     },
     {
@@ -401,13 +360,13 @@
         "1": 262
       },
       "flags": {},
-      "order": 12,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 37
+          "link": 44
         },
         {
           "name": "positive",
@@ -449,18 +408,178 @@
       ]
     },
     {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1030,
+        380
+      ],
+      "size": {
+        "0": 140,
+        "1": 50
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            30,
+            45
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 27,
+      "type": "IPAdapterModelLoader",
+      "pos": [
+        850,
+        810
+      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IPADAPTER",
+          "type": "IPADAPTER",
+          "links": [
+            40
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IPAdapterModelLoader"
+      },
+      "widgets_values": [
+        "ip-adapter_sd15.bin"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "CLIPVisionLoader",
+      "pos": [
+        780,
+        920
+      ],
+      "size": {
+        "0": 280,
+        "1": 60
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "links": [
+            41
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPVisionLoader"
+      },
+      "widgets_values": [
+        "IPAdapter_image_encoder_sd15.safetensors"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "IPAdapterApply",
+      "pos": [
+        1110,
+        810
+      ],
+      "size": {
+        "0": 210,
+        "1": 142
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ipadapter",
+          "type": "IPADAPTER",
+          "link": 40
+        },
+        {
+          "name": "clip_vision",
+          "type": "CLIP_VISION",
+          "link": 41
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 45
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 43
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            44
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "IPAdapterApply"
+      },
+      "widgets_values": [
+        0.7000000000000001,
+        0
+      ]
+    },
+    {
       "id": 19,
       "type": "CLIPTextEncode",
       "pos": [
-        1380,
-        990
+        1360,
+        810
       ],
       "size": {
         "0": 230,
         "1": 110
       },
       "flags": {},
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -490,73 +609,11 @@
       "bgcolor": "#353"
     },
     {
-      "id": 23,
-      "type": "IPAdapter",
-      "pos": [
-        1360,
-        780
-      ],
-      "size": [
-        250,
-        170
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 36
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 35
-        },
-        {
-          "name": "clip_vision",
-          "type": "CLIP_VISION",
-          "link": 38
-        },
-        {
-          "name": "mask",
-          "type": "MASK",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            37
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP_VISION_OUTPUT",
-          "type": "CLIP_VISION_OUTPUT",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "IPAdapter"
-      },
-      "widgets_values": [
-        0.75,
-        "ip-adapter_sd15.bin",
-        "fp16"
-      ]
-    },
-    {
       "id": 21,
       "type": "EmptyLatentImage",
       "pos": [
-        1080,
-        890
+        1380,
+        980
       ],
       "size": {
         "0": 210,
@@ -582,38 +639,6 @@
         512,
         512,
         4
-      ]
-    },
-    {
-      "id": 24,
-      "type": "CLIPVisionLoader",
-      "pos": [
-        1010,
-        780
-      ],
-      "size": [
-        280,
-        60
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "CLIP_VISION",
-          "type": "CLIP_VISION",
-          "links": [
-            38
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPVisionLoader"
-      },
-      "widgets_values": [
-        "IP-Adapter_sd15_pytorch_model.bin"
       ]
     }
   ],
@@ -747,36 +772,44 @@
       "IMAGE"
     ],
     [
-      35,
-      8,
+      40,
+      27,
       0,
-      23,
-      1,
-      "IMAGE"
+      28,
+      0,
+      "IPADAPTER"
     ],
     [
-      36,
+      41,
+      26,
+      0,
+      28,
+      1,
+      "CLIP_VISION"
+    ],
+    [
+      43,
       4,
       0,
-      23,
-      0,
+      28,
+      3,
       "MODEL"
     ],
     [
-      37,
-      23,
+      44,
+      28,
       0,
       16,
       0,
       "MODEL"
     ],
     [
-      38,
-      24,
+      45,
+      8,
       0,
-      23,
+      28,
       2,
-      "CLIP_VISION"
+      "IMAGE"
     ]
   ],
   "groups": [],
