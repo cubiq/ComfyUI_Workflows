@@ -44,13 +44,13 @@ The easiest image generation workflow. We will examine each aspect of this first
 
 5. Finally the latent is converted into an image we can see thank to the VAEDecode node. Note that the conversion is lossy and it's computationally heavy, so during your experiments the more you can work within the latent space the better.
 
-**Important:** In ComfyUI the random number generation is different than other UIs, that makes it very difficult to recreate the same image create --for example-- on A1111.
+:warning: **Important:** In ComfyUI the random number generation is different than other UIs, that makes it very difficult to recreate the same image create --for example-- on A1111.
 
-**Tip:** The connection "dots" on each node has a color, that color helps you understand where the node should be connected to/from.
+:bulb: **Tip:** The connection "dots" on each node has a color, that color helps you understand where the node should be connected to/from.
 
-**Tip:** If the image looks oversaturated or has too much contrast, try to lower the CFG scale.
+:bulb: **Tip:** If the image looks oversaturated or has too much contrast, try to lower the CFG scale.
 
-**Tip:** Remember you can always drag and drop images onto your ComfyUI workspace and the whole node layout will appear. This is also true for the screenshot of all the workflows you see in this repository!
+:bulb: **Tip:** Remember you can always drag and drop images onto your ComfyUI workspace and the whole node layout will appear. This is also true for the screenshot of all the workflows you see in this repository!
 
 ## [Basic SD1.x with external VAE](./basic_workflow_ext_vae.json)
 
@@ -76,7 +76,7 @@ The workflow is similar to the base one but:
 
 **Note:** You can enable/disable nodes by selecting them and pressing <kbd>CTRL</kbd> + <kbd>M</kbd>. In the example above you can disable the LatentFromBatch and the connected VAEDecode and SaveImage and re-enable them only when you've found the image you are interested in.
 
-**Tip:** if you double-click an empty space of the work area you'll be able to add a node by searching it by name.
+:bulb: **Tip:** if you double-click an empty space of the work area you'll be able to add a node by searching it by name.
 
 ## [Parametrize node options](./basic_parametrized.json)
 

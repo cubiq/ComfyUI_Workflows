@@ -40,7 +40,7 @@
       "title": "Prompt: Main subject",
       "properties": {},
       "widgets_values": [
-        "old man astronaut in a scifi spaceship towards his last mission\n\nhigh resolution, detailed, 4k"
+        "old man astronaut in a scifi spaceship towards his last mission\n\nprofessional photography, high resolution, detailed, 4k"
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -117,8 +117,8 @@
         0,
         4096,
         4096,
-        "blurry, rendering, illustration, flag",
-        "blurry, rendering, illustration, flag"
+        "blurry, rendering, illustration, flag, frankenstein",
+        "blurry, rendering, illustration, flag, frankenstein"
       ]
     },
     {
@@ -244,7 +244,7 @@
       "title": "Prompt: Negative",
       "properties": {},
       "widgets_values": [
-        "blurry, rendering, illustration, flag"
+        "blurry, rendering, illustration, flag, frankenstein"
       ],
       "color": "#322",
       "bgcolor": "#533"
@@ -306,10 +306,10 @@
         700,
         290
       ],
-      "size": [
-        240,
-        260
-      ],
+      "size": {
+        "0": 240,
+        "1": 262
+      },
       "flags": {},
       "order": 16,
       "mode": 0,
@@ -366,10 +366,10 @@
         700,
         180
       ],
-      "size": [
-        240,
-        60
-      ],
+      "size": {
+        "0": 240,
+        "1": 60
+      },
       "flags": {},
       "order": 5,
       "mode": 0,
@@ -400,10 +400,10 @@
         980,
         390
       ],
-      "size": [
-        370,
-        390
-      ],
+      "size": {
+        "0": 370,
+        "1": 390
+      },
       "flags": {},
       "order": 19,
       "mode": 0,
@@ -425,10 +425,10 @@
         1390,
         440
       ],
-      "size": [
-        250,
-        340
-      ],
+      "size": {
+        "0": 250,
+        "1": 340
+      },
       "flags": {},
       "order": 6,
       "mode": 0,
@@ -464,10 +464,10 @@
         1060,
         110
       ],
-      "size": [
-        280,
-        60
-      ],
+      "size": {
+        "0": 280,
+        "1": 60
+      },
       "flags": {},
       "order": 7,
       "mode": 0,
@@ -497,10 +497,10 @@
         1430,
         -70
       ],
-      "size": [
-        210,
-        75.99999332427979
-      ],
+      "size": {
+        "0": 210,
+        "1": 76
+      },
       "flags": {},
       "order": 14,
       "mode": 0,
@@ -538,10 +538,10 @@
         1430,
         50
       ],
-      "size": [
-        210,
-        76
-      ],
+      "size": {
+        "0": 210,
+        "1": 76
+      },
       "flags": {},
       "order": 15,
       "mode": 0,
@@ -579,10 +579,10 @@
         2080,
         70
       ],
-      "size": [
-        460,
-        480
-      ],
+      "size": {
+        "0": 460,
+        "1": 480
+      },
       "flags": {},
       "order": 22,
       "mode": 0,
@@ -604,10 +604,10 @@
         2250,
         -30
       ],
-      "size": [
-        140,
-        50
-      ],
+      "size": {
+        "0": 140,
+        "1": 50
+      },
       "flags": {},
       "order": 23,
       "mode": 0,
@@ -691,7 +691,7 @@
         3,
         1024,
         1024,
-        "blurry, rendering, illustration, flag"
+        "blurry, rendering, illustration, flag, frankenstein"
       ]
     },
     {
@@ -741,10 +741,10 @@
         1820,
         620
       ],
-      "size": [
-        210,
-        120
-      ],
+      "size": {
+        "0": 210,
+        "1": 120
+      },
       "flags": {},
       "order": 8,
       "mode": 0,
@@ -770,7 +770,7 @@
       "title": "Prompt: Main subject",
       "properties": {},
       "widgets_values": [
-        "old man astronaut in a scifi spaceship with cats on his lap\n\nhigh resolution, detailed, 4k"
+        "old man astronaut in a scifi spaceship with cat on his lap\n\nhigh resolution, highly detailed, 4k, sharp"
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -782,10 +782,10 @@
         2560,
         60
       ],
-      "size": [
-        440,
-        490
-      ],
+      "size": {
+        "0": 440,
+        "1": 490
+      },
       "flags": {},
       "order": 26,
       "mode": 0,
@@ -802,64 +802,16 @@
       ]
     },
     {
-      "id": 39,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        1060,
-        -30
-      ],
-      "size": [
-        280,
-        100
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            68
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            69,
-            71
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "dreamshaper_8Inpainting.safetensors"
-      ]
-    },
-    {
       "id": 36,
       "type": "VAEDecode",
       "pos": [
         980,
         290
       ],
-      "size": [
-        140,
-        50
-      ],
+      "size": {
+        "0": 140,
+        "1": 50
+      },
       "flags": {},
       "order": 17,
       "mode": 0,
@@ -898,10 +850,10 @@
         2080,
         -30
       ],
-      "size": [
-        140,
-        50
-      ],
+      "size": {
+        "0": 140,
+        "1": 50
+      },
       "flags": {},
       "order": 21,
       "mode": 0,
@@ -986,67 +938,7 @@
         6,
         1024,
         1024,
-        "old man astronaut in a scifi spaceship with cats on his lap\n\nhigh resolution, detailed, 4k"
-      ]
-    },
-    {
-      "id": 50,
-      "type": "KSampler",
-      "pos": [
-        2360,
-        750
-      ],
-      "size": [
-        250,
-        260
-      ],
-      "flags": {},
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 84
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 81
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 82
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 83
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            85
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        1,
-        "fixed",
-        12,
-        8,
-        "dpmpp_2m",
-        "karras",
-        0.35
+        "old man astronaut in a scifi spaceship with cat on his lap\n\nhigh resolution, highly detailed, 4k, sharp"
       ]
     },
     {
@@ -1121,8 +1013,105 @@
         0,
         4096,
         4096,
-        "old man astronaut in a scifi spaceship towards his last mission\n\nhigh resolution, detailed, 4k",
-        "old man astronaut in a scifi spaceship towards his last mission\n\nhigh resolution, detailed, 4k"
+        "old man astronaut in a scifi spaceship towards his last mission\n\nprofessional photography, high resolution, detailed, 4k",
+        "old man astronaut in a scifi spaceship towards his last mission\n\nprofessional photography, high resolution, detailed, 4k"
+      ]
+    },
+    {
+      "id": 38,
+      "type": "VAEEncodeForInpaint",
+      "pos": [
+        1430,
+        190
+      ],
+      "size": {
+        "0": 230,
+        "1": 100
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 60
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 74
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 73
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            67
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncodeForInpaint"
+      },
+      "widgets_values": [
+        6
+      ]
+    },
+    {
+      "id": 39,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        1060,
+        -30
+      ],
+      "size": {
+        "0": 280,
+        "1": 100
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            68
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            69,
+            71
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "v15/dreamshaper_8Inpainting.safetensors"
       ]
     },
     {
@@ -1176,7 +1165,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        7,
+        10,
         "fixed",
         20,
         5,
@@ -1186,34 +1175,39 @@
       ]
     },
     {
-      "id": 38,
-      "type": "VAEEncodeForInpaint",
+      "id": 50,
+      "type": "KSampler",
       "pos": [
-        1430,
-        190
+        2360,
+        750
       ],
-      "size": [
-        230,
-        100
-      ],
+      "size": {
+        "0": 250,
+        "1": 262
+      },
       "flags": {},
-      "order": 18,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
-          "name": "pixels",
-          "type": "IMAGE",
-          "link": 60
+          "name": "model",
+          "type": "MODEL",
+          "link": 84
         },
         {
-          "name": "vae",
-          "type": "VAE",
-          "link": 74
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 81
         },
         {
-          "name": "mask",
-          "type": "MASK",
-          "link": 73
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 82
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 83
         }
       ],
       "outputs": [
@@ -1221,17 +1215,23 @@
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            67
+            85
           ],
           "shape": 3,
           "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "VAEEncodeForInpaint"
+        "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        6
+        2,
+        "fixed",
+        15,
+        8,
+        "dpmpp_2m",
+        "karras",
+        0.35000000000000003
       ]
     }
   ],
