@@ -71,15 +71,15 @@ For this to work you need the [CLIP Vision model]() in the `ComfyUI/models/clip_
 
 ## [IPAdapter image + text](./IPAdapter_basic_SDXL.json)
 
-[IPAdapter](https://github.com/tencent-ailab/IP-Adapter) are a series of lightweight and rather effective models for image conditioning. They can be used alone or in conjuction with text and ControlNets.
+[IPAdapter](https://github.com/tencent-ailab/IP-Adapter) are a series of very effective models for image conditioning. They can be used alone or in conjuction with text and ControlNets.
 
 In this workflow we offer a simple image+text conditioning example. Also check the [experiments](#experiments) for more use cases. We are using SDXL but models for SD1.5 are also available.
 
-You need to download [these pretrained models](https://huggingface.co/h94/IP-Adapter/tree/main) on huggingface and install the [ComgyUI extension](https://github.com/cubiq/ComfyUI_IPAdapter_plus) (from yours truly). Note that **you need both the model and the image encoder**. Follow the installation instruction on the extension.
+You need to download [these pretrained models](https://huggingface.co/h94/IP-Adapter/tree/main) on huggingface and install the [ComgyUI extension](https://github.com/cubiq/ComfyUI_IPAdapter_plus) (from yours truly). Note that **you need both the model and the image encoder**. Follow the installation instruction on the extension page.
 
 The workflow itself is very simple and similar to the style model.
 
-The IPAdapter models are very powerful and you can get interesting results with them. Check the [experiments](#experiments) for more examples.
+:bulb: **Tip**: You can use multiple reference images using the `ImageBatch` node.
 
 <img src="./images/ipadapter-img-txt.jpg" height="256" alt="IPAdapter" />
 
@@ -117,7 +117,7 @@ In this SD1.5 workflow we first create an image with [dreamshaper](https://civit
 
 This workflow uses a conditioning image for IPAdapter and adds a Canny control net to further enhance the composition.
 
-For this example you need to download the [canny controlnet](https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_canny.pth) and place it under `ComfyUI/models/controlnet`. We use again the [dreamshaper](https://civitai.com/models/4384/dreamshaper) checkpoint.
+For this example you need to download the [canny controlnet](https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_canny.pth) and place it under `ComfyUI/models/controlnet`. Alternatively you can use the [Controlnet extension](https://github.com/Fannovel16/comfyui_controlnet_aux) that should take care of downloading all the missing models.
 
 ## [Timestepping a Style model](./experiments/timestepping_style_model.json)
 

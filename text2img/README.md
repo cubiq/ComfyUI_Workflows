@@ -98,9 +98,11 @@ Sometimes you need to position objects spacially inside your image. The easiest 
 
 4. Connect the scene prompt and the spacial conditioning with a **Conditioning combine** node.
 
-All left to do is to connect the conditioning combine to the KSampler positive prompt and wait for the magic to happen.
+All left to do is to send the conditioning combine to the KSampler positive prompt and wait for the magic to happen.
 
 Of course you can use this technique to position multiple objects not just one like in this example.
+
+:point_right: **Note:** the provided workflow does something a little different. It first sets two areas (one on the left and one on the right) and then apply a second pass on the whole image to make everything uniform. This the best way to make it work on SDXL.
 
 ## [Timestepping](./timestepping.json)
 

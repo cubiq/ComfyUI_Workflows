@@ -15,6 +15,7 @@
 - [Experiments](#experiments)
     - [Compare Samplers](#compare-samplers)
     - [Compare checkpoints](#compare-checkpoints)
+    - [Save each denoise step](#save-each-denoise-step)
 
 <!-- /TOC -->
 
@@ -216,3 +217,9 @@ In this workflow we are checking the difference between four samplers. We use th
 In this workflow we are comparing two checkpoints using the same prompt and sampler options: [Absolute Realisty](https://civitai.com/models/81458/absolutereality) and [Realistic Vision](https://huggingface.co/SG161222/Realistic_Vision_V3.0_VAE).
 
 Note that all models in the workflow need to be loaded into memory so it can become resource hungry to compare checkpoints.
+
+## [Save each denoise step](./experiments/save_noise_steps.json)
+
+This workflow saves each step of the denoising process into the `output` directory. To automate the process select the `Extra options` in the main ComfyUI menu, and set the batch count to the number of total steps (20 in this example).
+
+Remember you need to set the **primitive** `end_at_step` back to 1 each time you generate a new image.
