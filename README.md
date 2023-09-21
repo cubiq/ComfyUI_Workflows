@@ -4,11 +4,11 @@ A repository of well documented easy to follow workflows for [ComfyUI](https://g
 
 ## Introduction
 
-The workflows are meant as a **learning excercise**, they are by no means "the best" or the most optimized but they should give you a good understanding of how ComfyUI works.
+The workflows are meant as a **learning exercise**, they are by no means "the best" or the most optimized but they should give you a good understanding of how ComfyUI works.
 
-The workflows are designed for readability not tidiness; the execution flows from left to right, from top to bottom and you should be able to easily follow the "spaghetti" without moving nodes around.
+The workflows are designed for readability; the execution flows from left to right, from top to bottom and you should be able to easily follow the "spaghetti" without moving nodes around.
 
-The workflows are divided into macro categories, in the root of each directory you'll find the basic json files and an `experiments` directory. The experiments are more advanced examples and tips and tricks that might be useful in day-to-day tasks.
+This repo isare divided into macro categories, in the root of each directory you'll find the basic json files and an `experiments` directory. The experiments are more advanced examples and tips and tricks that might be useful in day-to-day tasks.
 
 This documetantion is mostly for beginners to intermediate users. Experienced users might find some inspiration in the experiments. No matter your skill level, please let me know if you have suggestions, corrections or if you wish to add a new workflow.
 
