@@ -8,7 +8,7 @@ The workflows are meant as a **learning exercise**, they are by no means "the be
 
 The workflows are designed for readability; the execution flows from left to right, from top to bottom and you should be able to easily follow the "spaghetti" without moving nodes around.
 
-This repo isare divided into macro categories, in the root of each directory you'll find the basic json files and an `experiments` directory. The experiments are more advanced examples and tips and tricks that might be useful in day-to-day tasks.
+This repo is divided into macro categories, in the root of each directory you'll find the basic json files and an `experiments` directory. The experiments are more advanced examples and tips and tricks that might be useful in day-to-day tasks.
 
 This documetantion is mostly for beginners to intermediate users. Experienced users might find some inspiration in the experiments. No matter your skill level, please let me know if you have suggestions, corrections or if you wish to add a new workflow.
 
@@ -18,9 +18,9 @@ The majority of the workflows work **without** any plugin installed with very fe
 
 There's a bit of turmoil in the community about [Stability AI](https://stability.ai/) endorsing ComfyUI.
 
-First of all there are many easier to use alternatives (like [StableSwarmUI](https://github.com/Stability-AI/StableSwarmUI)) and you are not forced to use ComfyUI if you are not comfortable with it. The most likely downside is that new features will take a little longer to get implemented.
+First of all there are many easier to use alternatives (like [StableSwarmUI](https://github.com/Stability-AI/StableSwarmUI)) and you are not forced to use ComfyUI if you are not comfortable with it. The most likely downside is that new features will take a little longer to get implemented outside of Comfy.
 
-ComfyUI has a tidy and swift codebase that makes adjusting to a fast paced technology easier than most alternatives. Its modular nature lets you mix and match component in a very granular and --if you want-- unconvential way. Most Stable Diffusion UIs choose for you the best pratice for any given task, with ComfyUI you can make your own best practice and easily compare the outcome of multiple solutions.
+ComfyUI has a tidy and swift codebase that makes adjusting to a fast paced technology easier than most alternatives. Its modular nature lets you mix and match component in a very granular and unconvential way. Most Stable Diffusion UIs choose for you the best pratice for any given task, with ComfyUI you can make your own best practice and easily compare the outcome of multiple solutions.
 
 On top of that ComfyUI is very efficient in terms of memory usage and speed.
 
@@ -28,7 +28,7 @@ On top of that ComfyUI is very efficient in terms of memory usage and speed.
 
 To follow all the exercises, clone or download this repository and place the files in the `input` directory inside the `ComfyUI/input` directory on your PC. That will let you follow all the workflows without errors.
 
-To review any workflow you can simply drop the JSON file onto your ComfyUI work area, also remember that any image generated with ComfyUI has the whole workflow embedded into itself. You can take any image you see in this documentation and drop it inside ComfyUI to load the full node structure.
+To review any workflow you can simply drop the JSON file onto your ComfyUI work area, also remember that any image generated with ComfyUI has the whole workflow embedded into itself. You can take many of the images you see in this documentation and drop it inside ComfyUI to load the full node structure.
 
 Let's get started!
 
