@@ -31,21 +31,21 @@ The easiest image generation workflow. We will examine each aspect of this first
 
 <img src="images/wf_sd1x_basic.png" alt="cat" width="100%" />
 
-1. You start by loading a checkpoint which is the brain the generation. For this tutorial be sure to have at least the file [v1-5-pruned-emaonly.safetensors](https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors) installed in your `ComfyUI/models/checkpoints` directory, but you can use whatever SD1.5 model you want.
+1. You start by loading a checkpoint which is the brain of the generation. For this tutorial be sure to have at least the file [v1-5-pruned-emaonly.safetensors](https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors) installed in your `ComfyUI/models/checkpoints` directory, but you can use whatever SD1.5 model you want.
 
 2. Next we set the **Latent** size. It is important to understand the difference between *latent and pixel space*. The image is actually processed in a special environment that contains information useful to the model but not very much to us. This environment is the **Latent**. Once the computation is finished the data can be converted into something we can see, ie: **pixels**. This phase happens at step #5 "Vae Decode" in the picture above.
 
 3. Time to add a Positive and Negative prompt. The text has to interpreted into a language the machine can understand. This translation is performed by CLIP models (hence the node name "CLIP Text Encode").
 
-4. If the checkpoint is the brain, the **KSampler** is the engine. We now have all the data needed to crunch some numbers. The main parameters we need to set are the following:
+4. If the checkpoint is the brain, the **KSampler** is the heart. We now have all the data needed to crunch some numbers. The main parameters we need to set are the following:
     - **Seed**: this is the number used to seed the random number generation. Different seed = different image.
     - **Steps**: number of steps used to reach the final image. More steps require more time to compute but might grant a better composition. That greatly varies based on the prompt, the sampler and the checkpoint. If usure start with a 15-20 value.
     - **CFG**: The *Classifier-free Guidance* scale defines how close the image will be to your prompt. The lower the number the closer the model will stay to your directions (ie: it has less time to iterate on the concept). If you are trying to create complex images the model is not directly trained for, a higher CFG might help with the composition. Generally a value between 4 and 9 should cover all your use cases but it depends on many factors including the checkpoint you are using.
-    - **Sampler** and **Scheduler** together are deputized to carry on the noise in the latent space until the final image is reached withint the defined steps. Some samplers may reach a good reasult in less steps but might be slower. Generally speaking there's not a "best" sampler but good overall options are "euler ancestral" and "dpmpp_2m karras" but be sure to experiment with all of them.
+    - **Sampler** and **Scheduler** together are deputized to carry on the noise in the latent space until the final image is reached withint the defined steps. Some samplers may reach a good result in less steps but might be slower. Generally speaking there's not a "best" sampler but good overall options are "euler ancestral" and "dpmpp_2m karras" but be sure to experiment with all of them.
 
 5. Finally the latent is converted into an image we can see thank to the VAEDecode node. Note that the conversion is lossy and it's computationally heavy, so during your experiments the more you can work within the latent space the better.
 
-:warning: **Important:** In ComfyUI the random number generation is different than other UIs, that makes it very difficult to recreate the same image create --for example-- on A1111.
+:warning: **Important:** In ComfyUI the random number generation is different than other UIs, that makes it very difficult to recreate the same image generated --for example-- on A1111.
 
 :bulb: **Tip:** The connection "dots" on each node has a color, that color helps you understand where the node should be connected to/from.
 
@@ -137,9 +137,9 @@ The layout looks like this:
 
 3. **Total number of steps**. Note that we parametrized a few values so we can reuse them easily (see [section above](#Parametrize-node-options)).
 
-4. The image creation is split into two phases: Base and Refiner. This parameter defines how many steps are spent on the Base models and how many on the refiner. **On a total of 25 steps we decided to spend 19 on the Base** and consequently 6 on the Refiner. A good rule of thumb is to let the base model do 80% of the work, but as always: experiment.
+4. The image creation is split into two phases: Base and Refiner. This parameter defines how many steps are spent on the Base model and how many on the refiner. **On a total of 25 steps we decided to spend 19 on the Base** and consequently 6 on the Refiner. A good rule of thumb is to let the base model do 80% of the work, but as always: experiment.
 
-5. This time we are usign the **Advanced KSampler**, it is a very important node that lets us more precicely work with the sampler. We set the total number of steps to 25 but we instruct the sampler to stop at step 19. Note that we need to set `return_with_leftover_noise` to `enable` so the refiner can work where the base lefts off.
+5. This time we are using the **Advanced KSampler**, it is a very important node that lets us more precicely work with the sampler. We set the total number of steps to 25 but we instruct the sampler to stop at step 19. Note that we need to set `return_with_leftover_noise` to `enable` so the refiner can work where the base lefts off.
 
 6. We load the refiner model.
 
