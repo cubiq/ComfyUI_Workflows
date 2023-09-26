@@ -55,7 +55,7 @@ This can be done with [unCLIP models](https://huggingface.co/stabilityai/stable-
 
 The Style model works similarly to unCLIP but it's a CLIP Vision conditioning and can be used with any SD1.5 model.
 
-For this to work you need the [CLIP Vision model]() in the `ComfyUI/models/clip_vision` directory and the style model itself in `ComfyUI/models/style_models`.
+For this to work you need the [CLIP Vision model](https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/pytorch_model.bin) in the `ComfyUI/models/clip_vision` directory and [the style model](https://huggingface.co/TencentARC/T2I-Adapter/blob/main/models/coadapter-style-sd15v1.pth) itself in `ComfyUI/models/style_models`.
 
 <img src="images/style.png" width="100%" alt="style model" />
 
