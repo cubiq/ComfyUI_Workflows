@@ -75,7 +75,7 @@ For this to work you need the [CLIP Vision model](https://huggingface.co/openai/
 
 In this workflow we offer a simple image+text conditioning example. Also check the [experiments](#experiments) for more use cases. We are using SDXL but models for SD1.5 are also available.
 
-You need to download [these pretrained models](https://huggingface.co/h94/IP-Adapter/tree/main) on huggingface and install the [ComgyUI extension](https://github.com/cubiq/ComfyUI_IPAdapter_plus) (from yours truly). Note that **you need both the model and the image encoder**. Follow the installation instruction on the extension page.
+You need to download [these pretrained models](https://huggingface.co/h94/IP-Adapter/tree/main) on huggingface and install the [ComfyUI extension](https://github.com/cubiq/ComfyUI_IPAdapter_plus) (from yours truly). Note that **you need both the model and the image encoder**. Follow the installation instruction on the extension page.
 
 The workflow itself is very simple and similar to the style model.
 
